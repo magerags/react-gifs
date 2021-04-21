@@ -1,5 +1,6 @@
 {
   "license": "UNLICENSED",
+  "homepage": "http://magerags.github.io/react-gifs",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
@@ -16,7 +17,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.14.0",
@@ -33,7 +34,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "predeploy": "npm run build",
+    "deploy": "webpack -p && gh-pages -d dist",
+    "build": "react-scripts build",
     "lint": "eslint './src/**/*.js*'",
-    "deploy": "webpack -p && gh-pages -d dist"
   }
 }

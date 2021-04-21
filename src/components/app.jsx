@@ -4,6 +4,8 @@ import Gif from "./gif";
 import GifList from "./gif_list";
 import SearchBar from "./search_bar";
 
+const GIPHY_API_KEY = "1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,15 +23,13 @@ class App extends Component {
   }
 
   search = (query) => {
-    giphy("ObbPdrGCfRD27mqOtF1XhHZVc8sxelJl").search({
-      q: query,
-      rating: 'g',
-      limit: 10
-    }, (error, result) => {
+    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
+    fetch(giphEndpoint).then(response => response.json()).then((data) => {
+      const gifs = data.data.map(giph => giph.id)
       this.setState({
-        gifs: result.data
-      });
-    });
+        gifs: gifs
+      })
+    })
   }
 
   render() {

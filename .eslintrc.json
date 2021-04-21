@@ -10,7 +10,10 @@
     "array-bracket-spacing": "off",
     "react/prefer-stateless-function": "off",
     "react/self-closing-comp": "off",
-    "react/destructuring-assignment": 0
+    "react/destructuring-assignment": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0
+
   },
   "env": {
     "browser": true

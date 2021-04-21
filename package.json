@@ -37,6 +37,6 @@
     "predeploy": "npm run build",
     "deploy": "webpack -p && gh-pages -d dist",
     "build": "react-scripts build",
-    "lint": "eslint './src/**/*.js*'",
+    "lint": "eslint './src/**/*.js*'"
   }
 }

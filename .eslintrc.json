@@ -9,7 +9,8 @@
     "space-before-function-paren": 0,
     "array-bracket-spacing": "off",
     "react/prefer-stateless-function": "off",
-    "react/self-closing-comp": "off"
+    "react/self-closing-comp": "off",
+    "react/destructuring-assignment": 0
   },
   "env": {
     "browser": true

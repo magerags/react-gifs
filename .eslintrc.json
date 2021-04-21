@@ -7,7 +7,9 @@
     "react/prop-types": 0,
     "arrow-body-style": 0,
     "space-before-function-paren": 0,
-    "array-bracket-spacing": "off"
+    "array-bracket-spacing": "off",
+    "react/prefer-stateless-function": "off",
+    "react/self-closing-comp": "off"
   },
   "env": {
     "browser": true
